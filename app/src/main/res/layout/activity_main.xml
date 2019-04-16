@@ -19,7 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/monotype_corsiva"
             android:textColor="@color/cardColor"
-            android:textSize="100"
+            android:textSize="100sp"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"></TextView>
