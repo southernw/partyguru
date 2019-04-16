@@ -21,14 +21,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     EditText txtEmail, txtPassword;
     Button btnLogin, btnRegister;
     private FirebaseAuth firebaseAuth;
+    private FirebaseUser firebaseUser;
     private String mCustomToken;
+    private String user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         firebaseAuth = FirebaseAuth.getInstance();
-
+        firebaseUser = firebaseAuth.getCurrentUser();
+        User currentUser = new User();
         txtEmail = findViewById(R.id.txtEmail);
         txtPassword = findViewById(R.id.txtPassword);
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -51,15 +54,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
+                        user = firebaseUser.getUid();
+
+                        Toast.makeText(LoginActivity.this,"" + user + "", Toast.LENGTH_LONG).show();
                         Toast.makeText(LoginActivity.this,"Successful", Toast.LENGTH_SHORT).show();
                         Intent newIntent = new Intent(LoginActivity.this, MainActivity.class);
                         LoginActivity.this.startActivity(newIntent);
                     }else{
-                        Toast.makeText(LoginActivity.this,"UnSuccessful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this,"Incorrect username/password", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
-
 
         }else{
             Intent myIntent = new Intent(LoginActivity.this, RegisterActivity.class);
