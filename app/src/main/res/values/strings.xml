@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">project</string>
+
+    <!-- Strings for login activity -->
+    <string name="activity_login_login">login</string>
+    <string name="activity_login_register">Register</string>
+    <string name="login_hint_text">e-mail address</string>
+    <string name="password_hint_text">password</string>
+    <string name="top_welcome">welcome   </string>
+    <string name="top_second">please login or register</string>
+    <!---->
+
+    <!-- Strings for register activity -->
+    <string name="register_firstname_text">first name</string>
+    <string name="register_lastname_text">last name</string>
+    <string name="register_password_text">password</string>
+    <string name="register_confirm_text">confirm password</string>
+    <string name="register_email_text">e-mail</string>
+
+
+
+
+
+
+</resources>
