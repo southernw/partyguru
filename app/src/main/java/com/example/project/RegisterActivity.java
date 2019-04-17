@@ -13,6 +13,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.w3c.dom.Text;
 
@@ -20,6 +22,8 @@ public class RegisterActivity extends AppCompatActivity {
     private TextView txtFirstName, txtLastName,
             txtPassword, txtConfirmPassword, txtEmail;
     private FirebaseAuth firebaseAuth;
+    private DatabaseReference ref;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,10 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void registerUser(String email, String firstName, String lName, String phoneNum){
+
     }
 
 

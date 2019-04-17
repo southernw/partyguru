@@ -1,24 +1,22 @@
 package com.example.project;
-import android.arch.persistence.room.ColumnInfo;
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
+
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class User {
 
-    private String email;
+    private FirebaseUser email;
 
-    private String firstName;
-    private String lastName;
-    private String password;
+    private FirebaseUser firstName;
+    private FirebaseUser lastName;
+    private FirebaseUser password;
 
 
     public User(){
 
     }
 
-    public User(String email, String firstName, String lastName, String password){
+    public User(FirebaseUser email, FirebaseUser firstName, FirebaseUser lastName, FirebaseUser password){
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,41 +24,37 @@ public class User {
     }
 
 
-    public String toString() {
-        return new StringBuilder(email).append("\n").append(firstName).append("\n").append(lastName).append("\n").append(password).toString();
-    }
 
-
-    public String getEmail() {
+    public FirebaseUser getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(FirebaseUser email) {
         this.email = email;
     }
 
-    public String getFirstName() {
+    public FirebaseUser getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(FirebaseUser firstName) {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    public FirebaseUser getLastName() {
         return lastName;
     }
 
-    public void setLastName( String lastName) {
+    public void setLastName(FirebaseUser lastName) {
         this.lastName = lastName;
     }
 
 
-    public String getPassword() {
+    public FirebaseUser getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(FirebaseUser password) {
         this.password = password;
     }
 }
