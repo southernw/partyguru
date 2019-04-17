@@ -5,56 +5,57 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class User {
 
-    private FirebaseUser email;
+    private String email;
+    private String firstName;
+    private String lastName;
+    private String password;
+    private String phoneNum;
 
-    private FirebaseUser firstName;
-    private FirebaseUser lastName;
-    private FirebaseUser password;
 
-
-    public User(){
-
-    }
-
-    public User(FirebaseUser email, FirebaseUser firstName, FirebaseUser lastName, FirebaseUser password){
+    public User(String email, String firstName, String lastName, String password, String phoneNum) {
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
+        this.phoneNum = phoneNum;
     }
 
+    public String getPhoneNum() {
+        return phoneNum;
+    }
 
-
-    public FirebaseUser getEmail() {
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
+    }
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(FirebaseUser email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public FirebaseUser getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(FirebaseUser firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public FirebaseUser getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(FirebaseUser lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-
-    public FirebaseUser getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(FirebaseUser password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 }

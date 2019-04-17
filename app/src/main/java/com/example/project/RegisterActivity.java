@@ -20,10 +20,11 @@ import org.w3c.dom.Text;
 
 public class RegisterActivity extends AppCompatActivity {
     private TextView txtFirstName, txtLastName,
-            txtPassword, txtConfirmPassword, txtEmail;
+            txtPassword, txtConfirmPassword, txtEmail, txtPhoneNum;
+    String firstName, lastName, password, email, phoneNum;
+
     private FirebaseAuth firebaseAuth;
     private DatabaseReference ref;
-    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.txtPassword);
         txtConfirmPassword = findViewById(R.id.txtConfirmPassword);
         txtEmail = findViewById(R.id.txtEmail);
+        txtPhoneNum = findViewById(R.id.txtPhoneNum);
         firebaseAuth = FirebaseAuth.getInstance();
 
         Button btn = findViewById(R.id.btnSubmit);
@@ -42,17 +44,31 @@ public class RegisterActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = txtEmail.getText().toString().trim();
-                String password = txtPassword.getText().toString().trim();
+                email = txtEmail.getText().toString().trim();
+                password = txtPassword.getText().toString().trim();
+                firstName = txtFirstName.getText().toString().trim();
+                lastName = txtLastName.getText().toString().trim();
+                phoneNum = txtPhoneNum.getText().toString().trim();
 
                 if(txtFirstName.getText().toString().isEmpty() || txtLastName.getText().toString().isEmpty() ||
-                txtPassword.getText().toString().isEmpty() || txtConfirmPassword.getText().toString().isEmpty() || txtEmail.getText().toString().isEmpty()){
+                txtPassword.getText().toString().isEmpty() || txtConfirmPassword.getText().toString().isEmpty() || txtEmail.getText().toString().isEmpty() ||
+                txtPhoneNum.getText().toString().isEmpty()){
                     Toast.makeText(RegisterActivity.this, "Error, all fields must be filled out.", Toast.LENGTH_LONG).show();
                 } else {
                     firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
+                            if(task.isSuccessful()) {
+                                Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
+                                registerUserData();
+
+
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                RegisterActivity.this.startActivity(intent);
+
+                            }else{
+                                Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            }
                         }
                     });
                 }
@@ -60,9 +76,12 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    public void registerUser(String email, String firstName, String lName, String phoneNum){
+    public void registerUserData() {
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference ref = firebaseDatabase.getReference(firebaseAuth.getUid());
+        User newUser = new User(email, firstName, lastName, password, phoneNum);
+        ref.child("UserInfo").setValue(newUser);
 
     }
-
 
 }

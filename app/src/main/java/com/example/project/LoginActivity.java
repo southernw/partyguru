@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         txtEmail = findViewById(R.id.txtEmail);
         txtPassword = findViewById(R.id.txtPassword);
 
-        currentUser = new User();
+
         firebaseAuth = FirebaseAuth.getInstance();
 
         Button btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -59,10 +59,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
 
-                        FirebaseUser user = firebaseAuth.getCurrentUser();
-                        String userId = user.getUid();
-
-                        Toast.makeText(LoginActivity.this," + userId + ", Toast.LENGTH_SHORT).show();
                         Toast.makeText(LoginActivity.this,"Successful", Toast.LENGTH_SHORT).show();
                         Intent newIntent = new Intent(LoginActivity.this, MainActivity.class);
                         LoginActivity.this.startActivity(newIntent);

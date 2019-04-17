@@ -38,72 +38,97 @@
         android:rowCount="3">
 
         <EditText
+            android:id="@+id/txtPhoneNum"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="423dp"
+            android:layout_marginBottom="116dp"
+            android:hint="@string/register_phone_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
             android:id="@+id/txtFirstName"
             android:layout_width="340dp"
             android:layout_height="61dp"
-            android:layout_marginBottom="364dp"
+            android:layout_marginTop="131dp"
+            android:layout_marginBottom="392dp"
             android:hint="@string/register_firstname_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/txtLastName"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="304dp"
+            android:layout_marginTop="203dp"
+            android:layout_marginBottom="336dp"
             android:hint="@string/register_lastname_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.535"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/txtPassword"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="252dp"
+            android:layout_marginTop="255dp"
+            android:layout_marginBottom="284dp"
             android:hint="@string/register_password_text"
             android:inputType="textPassword"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/txtConfirmPassword"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="192dp"
+            android:layout_marginTop="311dp"
+            android:layout_marginBottom="228dp"
             android:hint="@string/register_confirm_text"
             android:inputType="textPassword"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/txtEmail"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="132dp"
+            android:layout_marginTop="367dp"
+            android:layout_marginBottom="172dp"
             android:hint="@string/register_email_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.521"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="339dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="464dp"
+            android:layout_marginTop="480dp"
+            android:layout_marginBottom="56dp"
             android:background="@drawable/rounded_button"
             android:text="register"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintHorizontal_bias="0.075"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
