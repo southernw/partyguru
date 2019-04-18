@@ -55,6 +55,7 @@
                 android:layout_margin="16dp">
 
                 <ImageView
+                    android:id="@+id/imgNewParty"
                     android:layout_width="118dp"
                     android:layout_height="67dp"
                     android:src="@drawable/party_card" />
@@ -88,6 +89,7 @@
                 android:layout_margin="16dp">
 
                 <ImageView
+                    android:id="@+id/imgExParty"
                     android:layout_width="118dp"
                     android:layout_height="67dp"
                     android:src="@drawable/existing_party_icon" />
@@ -120,6 +122,7 @@
                 android:layout_margin="16dp">
 
                 <ImageView
+                    android:id="@+id/imgAccount"
                     android:layout_width="118dp"
                     android:layout_height="67dp"
                     android:src="@drawable/account_icon" />
@@ -153,6 +156,7 @@
                 android:layout_margin="16dp">
 
                 <ImageView
+                    android:id="@+id/imgExit"
                     android:layout_width="118dp"
                     android:layout_height="67dp"
                     android:src="@drawable/exit_icon" />
