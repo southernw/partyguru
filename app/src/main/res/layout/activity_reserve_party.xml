@@ -31,12 +31,68 @@
         android:layout_height="0dp"/>
 
 
-
     <android.support.constraint.ConstraintLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_weight="7"/>
+        android:layout_weight="7">
+
+        <EditText
+            android:id="@+id/txtTime"
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="192dp"
+            android:hint="choose time below"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtLocation"
+            android:layout_width="350dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="146dp"
+            android:hint="location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtPartyTheme"
+            android:layout_width="350dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="96dp"
+            android:hint="party theme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtPartyName"
+            android:layout_width="350dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="48dp"
+            android:hint="party name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="328dp"
+            android:layout_height="91dp"
+            android:layout_marginTop="236dp"
+            android:timePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
 
 
 
