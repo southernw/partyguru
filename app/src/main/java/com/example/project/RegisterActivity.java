@@ -63,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 registerUserData();
 
 
-                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                Intent intent = new Intent(RegisterActivity.this, AccountActivity.class);
                                 RegisterActivity.this.startActivity(intent);
 
                             }else{
@@ -80,7 +80,9 @@ public class RegisterActivity extends AppCompatActivity {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference ref = firebaseDatabase.getReference(firebaseAuth.getUid());
         User newUser = new User(email, firstName, lastName, password, phoneNum);
-        ref.child("UserInfo").setValue(newUser);
+        newUser.isActive=true;
+        newUser.setuID(ref.toString());
+        ref.child("User").setValue(newUser);
 
     }
 

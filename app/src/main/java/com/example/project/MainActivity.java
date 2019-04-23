@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.imgNewParty:
-                Intent intent = new Intent(MainActivity.this, ReserveParty.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent1 = new Intent(MainActivity.this, ReserveParty.class);
+                MainActivity.this.startActivity(intent1);
                 break;
 
             case R.id.imgExParty:
@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.imgAccount:
-                //Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-               // RegisterActivity.this.startActivity(intent);
+                Intent intent2 = new Intent(MainActivity.this, AccountActivity.class);
+                MainActivity.this.startActivity(intent2);
                 break;
 
             case R.id.imgExit:
