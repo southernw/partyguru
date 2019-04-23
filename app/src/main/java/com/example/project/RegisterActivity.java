@@ -61,9 +61,9 @@ public class RegisterActivity extends AppCompatActivity {
                             if(task.isSuccessful()) {
                                 Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
                                 registerUserData();
+                               // firebaseAuth.signOut();
 
-
-                                Intent intent = new Intent(RegisterActivity.this, AccountActivity.class);
+                               Intent intent = new Intent(RegisterActivity.this, AccountActivity.class);
                                 RegisterActivity.this.startActivity(intent);
 
                             }else{
@@ -80,8 +80,6 @@ public class RegisterActivity extends AppCompatActivity {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference ref = firebaseDatabase.getReference(firebaseAuth.getUid());
         User newUser = new User(email, firstName, lastName, password, phoneNum);
-        newUser.isActive=true;
-        newUser.setuID(ref.toString());
         ref.child("User").setValue(newUser);
 
     }

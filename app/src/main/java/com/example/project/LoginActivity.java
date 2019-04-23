@@ -59,7 +59,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
 
+                        FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();
                         Toast.makeText(LoginActivity.this,"Successful", Toast.LENGTH_SHORT).show();
+
                         Intent newIntent = new Intent(LoginActivity.this, MainActivity.class);
                         LoginActivity.this.startActivity(newIntent);
                     }else{

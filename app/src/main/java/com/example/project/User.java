@@ -10,8 +10,7 @@ public class User {
     public String lastName;
     public String password;
     public String phoneNum;
-    public String uID;
-    public Boolean isActive = false;
+
 
     public User(String email, String firstName, String lastName, String password, String phoneNum) {
         this.email = email;
@@ -22,20 +21,6 @@ public class User {
     }
     public User(){}
 
-   public void setuID(String uID){
-        this.uID = uID;
-   }
-
-   public String getuID(){
-        return uID;
-   }
-    public String getPhoneNum() {
-        return phoneNum;
-    }
-
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
     public String getEmail() {
         return email;
     }
@@ -66,5 +51,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getPhoneNum() {
+        return phoneNum;
+    }
+
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
     }
 }
