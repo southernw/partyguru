@@ -61,9 +61,8 @@ public class RegisterActivity extends AppCompatActivity {
                             if(task.isSuccessful()) {
                                 Toast.makeText(RegisterActivity.this, "Registration Successful", Toast.LENGTH_LONG).show();
                                 registerUserData();
-                               // firebaseAuth.signOut();
 
-                               Intent intent = new Intent(RegisterActivity.this, AccountActivity.class);
+                               Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 RegisterActivity.this.startActivity(intent);
 
                             }else{

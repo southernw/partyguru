@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.imgExit:
                 FirebaseAuth.getInstance().signOut();
-                finish();
                 System.exit(0);
 
         }
