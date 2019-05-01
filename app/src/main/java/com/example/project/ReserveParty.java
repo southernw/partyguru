@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -24,8 +25,11 @@ import com.google.firebase.FirebaseExceptionMapper;
 import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 
@@ -41,6 +45,7 @@ public class ReserveParty extends AppCompatActivity {
     Calendar calendar;
     int year, month, dayOfMonth;
     String balloons, cake = "No";
+    PartyPlanner partyPlanner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +64,7 @@ public class ReserveParty extends AppCompatActivity {
         txtTheme = findViewById(R.id.txtPartyTheme);
        switchBalloons = findViewById(R.id.switchBalloons);
        switchCake = findViewById(R.id.switchCake);
-
+        partyPlanner = new PartyPlanner();
 
         txtTime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,8 +72,6 @@ public class ReserveParty extends AppCompatActivity {
                 Calendar currentTime = Calendar.getInstance();
                 int hour = currentTime.get(Calendar.HOUR_OF_DAY);
                 int minute = currentTime.get(Calendar.MINUTE);
-
-
 
                 TimePickerDialog timePickerDialog;
                 timePickerDialog = new TimePickerDialog(ReserveParty.this, new TimePickerDialog.OnTimeSetListener() {
@@ -126,11 +129,27 @@ public class ReserveParty extends AppCompatActivity {
                         }else {
                             try {
                                 FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-                                DatabaseReference ref = firebaseDatabase.getReference(firebaseAuth.getUid());
-                                Party newParty = new Party(balloons, cake, txtPartyColors.getText().toString(), txtDate.getText().toString(), txtPartyLocation.getText().toString(),
-                                        txtPartyName.getText().toString(), txtNumGuests.getText().toString(), txtTheme.getText().toString(), txtTime.getText().toString());
-                                ref.child("Party").setValue(newParty);
-                                Toast.makeText(ReserveParty.this,"Party successfully reserved. We will be in contact soon!", Toast.LENGTH_LONG).show();
+                               final DatabaseReference ref = firebaseDatabase.getReference(firebaseAuth.getUid());
+
+
+                                ref.addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        if (dataSnapshot.hasChild("Party")){
+                                            Toast.makeText(ReserveParty.this,"Error, you already have a party reserved!", Toast.LENGTH_LONG).show();
+                                            return;
+                                        }else{
+
+                                            Party newParty = new Party(balloons, cake, txtPartyColors.getText().toString(), txtDate.getText().toString(), txtPartyLocation.getText().toString(),
+                                                    txtPartyName.getText().toString(), txtNumGuests.getText().toString(), txtTheme.getText().toString(), txtTime.getText().toString());
+                                            ref.child("Party").setValue(newParty);
+                                            Toast.makeText(ReserveParty.this,partyPlanner.getRandomName() + " has claimed your order! We will be in contact soon.", Toast.LENGTH_LONG).show();
+                                        }
+                                    }
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {}
+                                });
+
                             }catch(Exception e){
                                 Toast.makeText(ReserveParty.this,"Error: " + e, Toast.LENGTH_LONG).show();
                             }
