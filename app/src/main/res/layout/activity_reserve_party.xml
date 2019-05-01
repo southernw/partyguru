@@ -39,18 +39,27 @@
 
         <EditText
             android:id="@+id/txtDate"
-            android:layout_width="240dp"
+            android:layout_width="350dp"
             android:layout_height="41dp"
+            android:layout_marginTop="221dp"
+            android:layout_marginBottom="251dp"
+            android:focusableInTouchMode="false"
+            android:hint="select date"
             android:inputType="text"
-            tools:layout_editor_absoluteX="141dp"
-            tools:layout_editor_absoluteY="206dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/txtLocation"
             android:layout_width="350dp"
             android:layout_height="41dp"
-            android:layout_marginTop="146dp"
+            android:layout_marginTop="167dp"
+            android:layout_marginBottom="305dp"
             android:hint="location"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,8 +69,10 @@
             android:id="@+id/txtPartyTheme"
             android:layout_width="350dp"
             android:layout_height="41dp"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="117dp"
+            android:layout_marginBottom="355dp"
             android:hint="party theme"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,20 +82,23 @@
             android:id="@+id/txtPartyName"
             android:layout_width="350dp"
             android:layout_height="41dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="408dp"
             android:hint="party name"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TimePicker
-            android:id="@+id/timePicker"
-            android:layout_width="322dp"
-            android:layout_height="79dp"
-            android:layout_marginTop="325dp"
-            android:layout_marginBottom="97dp"
-            android:timePickerMode="spinner"
+        <EditText
+            android:id="@+id/txtPartyTime"
+            android:layout_width="350dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="274dp"
+            android:layout_marginBottom="198dp"
+            android:focusableInTouchMode="false"
+            android:hint="party time"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -92,14 +106,32 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <Button
-            android:id="@+id/btnSelectDate"
-            android:layout_width="115dp"
-            android:layout_height="40dp"
-            android:background="@drawable/rounded_button"
-            android:text="select date"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="205dp" />
+        <EditText
+            android:id="@+id/txtPartyColors"
+            android:layout_width="160dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="327dp"
+            android:layout_marginBottom="145dp"
+            android:hint="party colors"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtNumGuests"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtNumGuests"
+            android:layout_width="160dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="327dp"
+            android:layout_marginBottom="145dp"
+            android:hint="number guests"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtPartyColors"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <Button
             android:id="@+id/btnReserve"
@@ -117,30 +149,30 @@
 
         <Switch
             android:id="@+id/switchBalloons"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="285dp"
-
-            android:layout_marginBottom="198dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="288dp"
+            android:layout_marginTop="386dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="100dp"
             android:text="balloons"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/switchCake"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="balloons" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Switch
             android:id="@+id/switchCake"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="283dp"
-            android:layout_marginBottom="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="386dp"
+            android:layout_marginEnd="306dp"
+            android:layout_marginBottom="100dp"
             android:text="cake"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/switchBalloons"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
