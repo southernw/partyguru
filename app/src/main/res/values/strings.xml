@@ -3,7 +3,7 @@
 
     <!-- Strings for login activity -->
     <string name="activity_login_login">login</string>
-    <string name="activity_login_register">Register</string>
+    <string name="activity_login_register">register</string>
     <string name="login_hint_text">e-mail address</string>
     <string name="password_hint_text">password</string>
     <string name="top_welcome">welcome   </string>
@@ -17,7 +17,7 @@
     <string name="register_confirm_text">confirm password</string>
     <string name="register_email_text">e-mail</string>
     <string name="register_phone_text">phone number</string>
-    <string name="title_activity_reserve_party">ReserveParty</string>
+    <string name="title_activity_reserve_party">reserve party</string>
 
 
 </resources>

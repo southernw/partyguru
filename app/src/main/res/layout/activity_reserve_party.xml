@@ -38,16 +38,12 @@
         android:layout_weight="7">
 
         <EditText
-            android:id="@+id/txtTime"
-            android:layout_width="350dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="192dp"
-            android:hint="choose time below"
+            android:id="@+id/txtDate"
+            android:layout_width="226dp"
+            android:layout_height="41dp"
             android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.524"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            tools:layout_editor_absoluteX="155dp"
+            tools:layout_editor_absoluteY="199dp" />
 
         <EditText
             android:id="@+id/txtLocation"
@@ -86,12 +82,22 @@
             android:id="@+id/timePicker"
             android:layout_width="328dp"
             android:layout_height="91dp"
-            android:layout_marginTop="356dp"
+            android:layout_marginTop="292dp"
             android:timePickerMode="spinner"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.385"
+            app:layout_constraintHorizontal_bias="0.373"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/btnSelectDate"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rounded_button"
+            android:text="select date"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="200dp" />
 
         <Button
             android:id="@+id/btnReserve"
@@ -101,6 +107,23 @@
             android:text="reserve"
             tools:layout_editor_absoluteX="31dp"
             tools:layout_editor_absoluteY="449dp" />
+
+        <Switch
+            android:id="@+id/switchBalloons"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:text="Switch"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="252dp"
+            tools:text="balloons" />
+
+        <Switch
+            android:id="@+id/switchBalloons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cake"
+            tools:layout_editor_absoluteX="162dp"
+            tools:layout_editor_absoluteY="254dp" />
 
     </android.support.constraint.ConstraintLayout>
 
