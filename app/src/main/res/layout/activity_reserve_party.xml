@@ -43,6 +43,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="192dp"
             android:hint="choose time below"
+            android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.524"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,12 +86,21 @@
             android:id="@+id/timePicker"
             android:layout_width="328dp"
             android:layout_height="91dp"
-            android:layout_marginTop="236dp"
+            android:layout_marginTop="356dp"
             android:timePickerMode="spinner"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.385"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnReserve"
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:text="reserve"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="449dp" />
 
     </android.support.constraint.ConstraintLayout>
 

@@ -2,92 +2,94 @@ package com.example.project;
 
 public class Party {
 
-    String Balloons,Cake,PartyColors, PartyDate,PartyLocation, PartyName, PartyNumGuests,
-    PartyTheme, PartyTime;
+    String balloons,cake,partyColors, partyDate,partyLocation, partyName, partyNumGuests,
+    partyTheme, partyTime;
 
-    public Party(String Balloons, String Cake, String PartyColors, String PartyDate, String PartyLocation, String PartyName, String PartyNumGuests, String PartyTheme, String PartyTime) {
-        this.Balloons =Balloons;
-        this.Cake = Cake;
-        PartyColors = PartyColors;
-        PartyDate = PartyDate;
-        PartyLocation = PartyLocation;
-        PartyName = PartyName;
-        PartyNumGuests = PartyNumGuests;
-        PartyTheme = PartyTheme;
-        PartyTime = PartyTime;
-    }
 
-    public Party(){ }
+
+    public Party(){}
 
     public String getBalloons() {
-        return Balloons;
+        return balloons;
     }
 
     public void setBalloons(String balloons) {
-        this.Balloons = balloons;
+        this.balloons = balloons;
     }
 
     public String getCake() {
-        return Cake;
+        return cake;
     }
 
-    public void setCake(String Cake) {
-        this.Cake = Cake;
+    public void setCake(String cake) {
+        this.cake = cake;
     }
 
     public String getPartyColors() {
-        return PartyColors;
+        return partyColors;
     }
 
     public void setPartyColors(String partyColors) {
-        PartyColors = partyColors;
+        this.partyColors = partyColors;
     }
 
     public String getPartyDate() {
-        return PartyDate;
+        return partyDate;
     }
 
     public void setPartyDate(String partyDate) {
-        PartyDate = partyDate;
+        this.partyDate = partyDate;
     }
 
     public String getPartyLocation() {
-        return PartyLocation;
+        return partyLocation;
     }
 
     public void setPartyLocation(String partyLocation) {
-        PartyLocation = partyLocation;
+        this.partyLocation = partyLocation;
     }
 
     public String getPartyName() {
-        return PartyName;
+        return partyName;
     }
 
     public void setPartyName(String partyName) {
-        PartyName = partyName;
+        this.partyName = partyName;
     }
 
     public String getPartyNumGuests() {
-        return PartyNumGuests;
+        return partyNumGuests;
     }
 
     public void setPartyNumGuests(String partyNumGuests) {
-        PartyNumGuests = partyNumGuests;
+        this.partyNumGuests = partyNumGuests;
     }
 
     public String getPartyTheme() {
-        return PartyTheme;
+        return partyTheme;
     }
 
     public void setPartyTheme(String partyTheme) {
-        PartyTheme = partyTheme;
+        this.partyTheme = partyTheme;
     }
 
     public String getPartyTime() {
-        return PartyTime;
+        return partyTime;
     }
 
     public void setPartyTime(String partyTime) {
-        PartyTime = partyTime;
+        this.partyTime = partyTime;
+    }
+
+    public Party(String balloons, String cake, String partyColors, String partyDate, String partyLocation, String partyName, String partyNumGuests, String partyTheme, String partyTime) {
+        this.balloons = balloons;
+        this.cake = cake;
+        this.partyColors = partyColors;
+        this.partyDate = partyDate;
+        this.partyLocation = partyLocation;
+        this.partyName = partyName;
+        this.partyNumGuests = partyNumGuests;
+        this.partyTheme = partyTheme;
+        this.partyTime = partyTime;
     }
 }
