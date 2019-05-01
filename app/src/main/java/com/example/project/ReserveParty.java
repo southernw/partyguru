@@ -19,10 +19,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.google.firebase.FirebaseError;
-import com.google.firebase.FirebaseException;
-import com.google.firebase.FirebaseExceptionMapper;
-import com.google.firebase.FirebaseNetworkException;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
