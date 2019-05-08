@@ -38,13 +38,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.imgExParty:
-                //Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                //RegisterActivity.this.startActivity(intent);
+                Intent intent2 = new Intent(MainActivity.this, LoginActivity.class);
+                MainActivity.this.startActivity(intent2);
                 break;
 
             case R.id.imgAccount:
-                Intent intent2 = new Intent(MainActivity.this, AccountActivity.class);
-                MainActivity.this.startActivity(intent2);
+                Intent intent3 = new Intent(MainActivity.this, AccountActivity.class);
+                MainActivity.this.startActivity(intent3);
                 break;
 
             case R.id.imgExit:
