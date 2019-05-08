@@ -15,14 +15,14 @@
         android:layout_height="0dp">
 
         <TextView
-            android:layout_width="256dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/monotype_corsiva"
             android:text="account"
             android:textColor="@color/cardColor"
-            android:textSize="80sp"></TextView>
+            android:textSize="100sp"></TextView>
     </RelativeLayout>
 
     <RelativeLayout
@@ -31,14 +31,14 @@
         android:layout_height="2dp">
 
         <TextView
-            android:layout_width="256dp"
+            android:layout_width="285dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_centerInParent="true"
             android:fontFamily="@font/monotype_corsiva"
             android:text="user details"
             android:textColor="@color/cardColor"
-            android:textSize="50sp"></TextView>
+            android:textSize="70sp"></TextView>
     </RelativeLayout>
 
 

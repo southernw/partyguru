@@ -15,20 +15,21 @@
         android:layout_height="0dp">
 
         <TextView
-            android:layout_width="256dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/monotype_corsiva"
             android:text="@string/title_activity_reserve_party"
             android:textColor="@color/cardColor"
-            android:textSize="50sp"></TextView>
+            android:textSize="75sp"></TextView>
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="0dp"/>
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1" />
 
 
     <android.support.constraint.ConstraintLayout

@@ -16,14 +16,14 @@
 
         <TextView
             android:id="@+id/textGrid"
-            android:fontFamily="@font/monotype_corsiva"
-            android:textColor="@color/cardColor"
-            android:textSize="100sp"
-            android:text="Register "
-            android:layout_gravity="center_horizontal"
-            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></TextView>
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/monotype_corsiva"
+            android:text="registration"
+            android:textColor="@color/cardColor"
+            android:textSize="75sp"></TextView>
 
     </RelativeLayout>
 

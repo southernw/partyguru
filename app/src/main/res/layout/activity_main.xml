@@ -20,7 +20,7 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/monotype_corsiva"
-            android:text="PartyGuru"
+            android:text="Party Guru"
             android:textColor="@color/cardColor"
             android:textSize="80sp"></TextView>
 
