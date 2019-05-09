@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">project</string>
+    <string name="app_name">Party Guru</string>
 
     <!-- Strings for login activity -->
     <string name="activity_login_login">login</string>
@@ -10,14 +10,49 @@
     <string name="top_second">please login or register</string>
     <!---->
 
-    <!-- Strings for register activity -->
+    <!-- Strings for registration activity -->
     <string name="register_firstname_text">first name</string>
     <string name="register_lastname_text">last name</string>
     <string name="register_password_text">password</string>
     <string name="register_confirm_text">confirm password</string>
     <string name="register_email_text">e-mail</string>
     <string name="register_phone_text">phone number</string>
-    <string name="title_activity_reserve_party">reserve party</string>
+    <string name="register_title">registration</string>
+    <string name="btn_register">register</string>
+    <!---->
 
+    <!-- Strings for main activity -->
+    <string name="main_activity_title">Party Guru</string>
+    <string name="main_activity_plan_party">plan new party</string>
+    <string name="main_activity_view_party">view existing party</string>
+    <string name="main_activity_account">my account</string>
+    <string name="main_activity_logout">logout</string>
+    <!---->
+
+    <!-- Strings for reserve activity -->
+    <string name="reserve_title">reserve party</string>
+    <string name="reserve_btn_submit">reserve</string>
+    <string name="reserve_partyname_hint">party name</string>
+    <string name="reserve_partycolors_hint">party colors</string>
+    <string name="reserve_partylocation_hint">location</string>
+    <string name="reserve_partydate_hint">click to select date</string>
+    <string name="reserve_partytime_hint">click to select time</string>
+    <string name="reserve_partytheme_hint">party theme</string>
+    <string name="reserve_partycake_hint">cake?</string>
+    <string name="reserve_partyballoons_hint">balloons?</string>
+    <string name="reserve_partynumguests_hint">number of guests</string>
+    <!---->
+
+    <!-- Strings for account activity -->
+    <string name="account_title1">account</string>
+    <string name="account_title2">user details</string>
+    <string name="account_btn_update">update my info</string>
+    <!---->
+
+
+    <!-- Strings for existing activity -->
+    <string name="existing_title">view existing</string>
+    <string name="existing_btn_getres">get reservation</string>
+    <!---->
 
 </resources>

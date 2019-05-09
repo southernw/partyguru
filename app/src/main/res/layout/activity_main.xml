@@ -20,7 +20,7 @@
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/monotype_corsiva"
-            android:text="Party Guru"
+            android:text="@string/main_activity_title"
             android:textColor="@color/cardColor"
             android:textSize="80sp"></TextView>
 
@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="155dp"
-                android:text="plan new party"
+                android:text="@string/main_activity_plan_party"
                 android:textAlignment="center" />
 
         </android.support.v7.widget.CardView>
@@ -94,11 +94,12 @@
                     android:layout_height="67dp"
                     android:src="@drawable/existing_party_icon" />
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="155dp"
-                android:text="view existing party"
+                android:text="@string/main_activity_view_party"
                 android:textAlignment="center" />
 
         </android.support.v7.widget.CardView>
@@ -132,7 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="155dp"
-                android:text="account"
+                android:text="@string/main_activity_account"
                 android:textAlignment="center" />
 
         </android.support.v7.widget.CardView>
@@ -161,11 +162,12 @@
                     android:layout_height="67dp"
                     android:src="@drawable/exit_icon" />
             </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="155dp"
-                android:text="log out"
+                android:text="@string/main_activity_logout"
                 android:textAlignment="center" />
 
         </android.support.v7.widget.CardView>

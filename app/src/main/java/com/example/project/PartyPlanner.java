@@ -16,7 +16,9 @@ public class PartyPlanner {
         names.add("Joyce");
         names.add("Southern");
         names.add("Cathy");
-        names.add("Cathy");
+        names.add("Ron");
+        names.add("Kendall");
+        names.add("Ralph");
     }
 
     public String getRandomName() {
